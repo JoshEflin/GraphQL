@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "eslint-config-wesbos": "^3.2.3"
+  },
   "devDependencies": {
     "concurrently": "^5.1.0"
   }
