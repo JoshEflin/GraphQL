@@ -10,22 +10,25 @@ const typeDefs = gql`
   }
 
   type Book {
+    _id: ID
     authors:[String]
     description: String!
-    bookid:String
+    bookId:String
     image:String
     link:String
     title:String!
   }
 
   type Query {
-    User: [User]
-    books(_id: String): [Book]
+    users: [User]
+    user(userId:ID!):User
+    books:[Book]
+    book(bookId:ID!):Book
   }
 
   type Mutation {
-    createBook(User1: String!, User2: String!): Book
-    createVote(_id: String!, UserNum: Int!): Book
+    addBook(authors:[String!], description:String!,bookId:String,image:String,link:String,title:String!): Book
+    createUser(username:String!, email:String!,password:String!): Book
   }
 `;
 
